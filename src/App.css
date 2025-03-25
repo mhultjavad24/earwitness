@@ -5,6 +5,30 @@
   text-align: center;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.app-container h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.recordings-counter {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  color: #0066cc;
+  font-weight: bold;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
