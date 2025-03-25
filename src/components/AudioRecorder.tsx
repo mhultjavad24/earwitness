@@ -215,22 +215,23 @@ const AudioRecorder = ({ onRecordingComplete }: AudioRecorderProps) => {
   }, [audioUrl]);
 
   return (
-    <div className="audio-recorder">
-      <h2>Audio Recorder</h2>
+    <div className="audio-recorder flex flex-col items-center justify-center p-6 rounded-lg shadow-lg bg-gray-800 text-gray-100">
+      <h2 className="text-xl font-semibold mb-4">Audio Recorder</h2>
       
       {error && (
-        <div className="error-message">
+        <div className="error-message text-red-500 mb-4">
           {error}
         </div>
       )}
       
-      <div className="microphone-selection">
-        <label htmlFor="microphone-select">Select Microphone:</label>
+      <div className="microphone-selection mb-4">
+        <label htmlFor="microphone-select" className="block text-sm font-medium mb-2">Select Microphone:</label>
         <select 
           id="microphone-select" 
           value={selectedMicrophoneId} 
           onChange={handleMicrophoneChange}
           disabled={isRecording}
+          className="w-full p-2 rounded border border-gray-600 bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
           {availableMicrophones.length === 0 && (
             <option value="">No microphones found</option>
@@ -243,11 +244,11 @@ const AudioRecorder = ({ onRecordingComplete }: AudioRecorderProps) => {
         </select>
       </div>
       
-      <div className="recorder-controls">
+      <div className="recorder-controls flex items-center space-x-4">
         {!isRecording ? (
           <button 
             onClick={startRecording} 
-            className="record-button"
+            className="record-button bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
             disabled={availableMicrophones.length === 0}
             aria-label="Start recording"
           >
@@ -255,12 +256,13 @@ const AudioRecorder = ({ onRecordingComplete }: AudioRecorderProps) => {
           </button>
         ) : (
           <>
-            <div className="recording-indicator">
-              <span className="recording-dot"></span> Recording: {formatTime(recordingTime)}
+            <div className="recording-indicator flex items-center space-x-2">
+              <span className="recording-dot w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
+              <span>Recording: {formatTime(recordingTime)}</span>
             </div>
             <button 
               onClick={stopRecording} 
-              className="stop-button"
+              className="stop-button bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
               aria-label="Stop recording"
             >
               Stop
