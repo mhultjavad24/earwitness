@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #e0e0e0; /* Light gray for better contrast */
+  background-color: #1e1e2f; /* Darker background for a modern look */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,21 +37,39 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #646cff; /* Accent border */
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #2d2d44; /* Dark button background */
+  color: #e0e0e0; /* Light text */
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
+  background-color: #3a3a5c; /* Slightly lighter on hover */
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.quote-display {
+  background-color: #2a2a3d; /* Card background */
+  color: #e0e0e0; /* Text color */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.audio-recorder {
+  background-color: #2a2a3d; /* Card background */
+  color: #e0e0e0; /* Text color */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: light) {
