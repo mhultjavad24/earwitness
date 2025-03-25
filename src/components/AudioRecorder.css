@@ -1,0 +1,223 @@
+.audio-recorder {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.audio-recorder h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  background-color: #ffdddd;
+  color: #cc0000;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.microphone-selection {
+  margin-bottom: 20px;
+}
+
+.microphone-selection label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.microphone-selection select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+}
+
+.recorder-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.record-button, .stop-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.record-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.record-button:hover:not(:disabled) {
+  background-color: #d32f2f;
+}
+
+.record-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.stop-button {
+  background-color: #333;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #222;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.recording-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #f44336;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.playback-controls {
+  margin-top: 25px;
+}
+
+.playback-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.play-button, .pause-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.play-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.play-button:hover {
+  background-color: #388e3c;
+}
+
+.pause-button {
+  background-color: #ff9800;
+  color: white;
+}
+
+.pause-button:hover {
+  background-color: #f57c00;
+}
+
+.progress-container {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ddd;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #2196F3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #2196F3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-time {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.volume-control label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.volume-slider {
+  flex: 1;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #2196F3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #2196F3;
+  border-radius: 50%;
+  cursor: pointer;
+}
